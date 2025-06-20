@@ -1,18 +1,24 @@
 <?php
 
-namespace Cotrollers\Academic;
+namespace Controllers\Academic;
 
 use Controllers\PublicController;
 use Views\Renderer;
+use Dao\Producto\Productos;
+use Dao\Carros\Carros as CarrosDAO;
 
 class About extends PublicController
 {
-    private string $HolaMensaje;
+    private string $HolaMenssage;
     public function run(): void
     {
-        $this->HolaMensaje = "Hola esto es un nuevo controlador";
+        $productos = Productos::obtenerProductos();
+        $this->HolaMenssage = "Hola esto es un nuevo controlador";
+        $carros = CarrosDAO::obtenerCarros();
         Renderer::render("academic/about", [
-            "mensaje" => $this->HolaMensaje
+            "mensaje" => $this->HolaMenssage,
+            "productos" => $productos,
+            "carros" => $carros,
         ]);
     }
 }
