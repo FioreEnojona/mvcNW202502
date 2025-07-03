@@ -2,10 +2,9 @@
 
 namespace Controllers\Mantenimientos\Productos;
 
+use Controllers\PublicController;
 use Dao\Producto\Categorias as CategoriasDAO;
 use Views\Renderer;
-
-use Controllers\PublicController;
 
 class Categorias extends PublicController
 {
@@ -16,7 +15,6 @@ class Categorias extends PublicController
             "categorias" => []
         ];
     }
-
     public function run(): void
     {
         $this->viewData["categorias"] = CategoriasDAO::getCategorias();
