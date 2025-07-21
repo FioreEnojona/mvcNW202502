@@ -10,14 +10,14 @@
       "nav_url": "index.php?page=Sec_Register",
       "nav_label":"<i class=\"fas fa-sign-in-alt\"></i>&nbsp;Crear Cuenta"
     }
-    ,
-     {
-      "id": "Menu_Categorias",
-      "nav_url": "index.php?page=Mantenimientos-Productos-Categorias",
-      "nav_label":"<i class=\"fas fa-sign-in-alt\"></i>&nbsp;Categorias"
-    }
+  
   ],
   "private": [
+     {
+      "id": "Menu_Products",
+      "nav_url": "index.php?page=Products_Products",
+      "nav_label":"<i class=\"fas fa-table\"></i>&nbsp;WW Productos"
+    },
     {
       "id":"Menu_PaymentCheckout",
       "nav_url": "index.php?page=Checkout_Checkout",
